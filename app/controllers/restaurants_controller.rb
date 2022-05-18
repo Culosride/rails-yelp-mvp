@@ -7,7 +7,6 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
-    @collection = %w[chinese italian japanese french belgian]
   end
 
   def show

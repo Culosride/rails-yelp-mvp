@@ -7,13 +7,14 @@ class RestaurantsController < ApplicationController
 
   def new
     @restaurant = Restaurant.new
+    @collection = %w[chinese italian japanese french belgian]
   end
 
   def show
   end
 
   def create
-    @restaurant = restaurant.new(rest_params)
+    @restaurant = Restaurant.new(rest_params)
     @restaurant.save
     redirect_to restaurant_path(@restaurant)
   end
